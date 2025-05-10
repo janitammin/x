@@ -1,1 +1,7 @@
-192.168.0.10
+- hosts: "apt"
+  become: yes
+  tasks:
+    - name: apt
+      apt:
+        update_cache: yes
+        upgrade: 'yes'
